@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-dark-bg text-gray-300 font-sans antialiased;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-dark-bg;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-dark-border rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-neon-dark;
+}
+
+/* Glassmorphism utilities */
+.glass-panel {
+  @apply bg-dark-card/80 backdrop-blur-md border border-dark-border rounded-2xl;
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400;
+}
+
+.text-neon-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-neon to-emerald-400;
+}
